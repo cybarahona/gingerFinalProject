@@ -1,6 +1,4 @@
-package com.example.cbhealthypets.modelo;
-
-import com.example.cbhealthypets.R;
+package com.example.cbhealthypets;
 
 import java.util.ArrayList;
 import java.util.List;
