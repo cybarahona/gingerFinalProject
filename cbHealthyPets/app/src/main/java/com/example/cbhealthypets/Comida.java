@@ -44,7 +44,7 @@ public class Comida {
         CUIDADOS.add(new Comida(2, "Corte de Pelo", R.drawable.peluqueria));
         CUIDADOS.add(new Comida(3, "Corte de uñas", R.drawable.corteunas));
         CUIDADOS.add(new Comida(2.5f, "Shampoo Perro Consentido", R.drawable.shampooperroconsentido));
-        CUIDADOS.add(new Comida(4, "Jabon Vetriderm", R.drawable.VETRIDERM_large));
+        CUIDADOS.add(new Comida(4, "Jabon Vetriderm", R.drawable.vetriderm));
         CUIDADOS.add(new Comida(5, "Jabon Fido", R.drawable.jabonfido));
     }
 

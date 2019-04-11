@@ -51,7 +51,6 @@ public class FragmentoCategorias extends Fragment {
     private void insertarTabs(ViewGroup container) {
         View padre = (View) container.getParent();
         appBarLayout = (AppBarLayout) padre.findViewById(R.id.appbar);
-
         tabLayout = new TabLayout(getActivity());
         tabLayout.setTabTextColors(Color.parseColor("#FFFFFF"), Color.parseColor("#FFFFFF"));
         appBarLayout.addView(tabLayout);
@@ -60,8 +59,8 @@ public class FragmentoCategorias extends Fragment {
     private void poblarViewPager(ViewPager viewPager) {
         AdaptadorSecciones adapter = new AdaptadorSecciones(getFragmentManager());
         adapter.addFragment(FragmentoCategoria.nuevaInstancia(0), getString(R.string.titulo_tab_platillos));
-        adapter.addFragment(FragmentoCategoria.nuevaInstancia(1), getString(R.string.titulo_tab_bebidas));
-        adapter.addFragment(FragmentoCategoria.nuevaInstancia(2), getString(R.string.titulo_tab_postres));
+        adapter.addFragment(FragmentoCategoria.nuevaInstancia(1), getString(R.string.titulo_tab_sumplementos));
+        adapter.addFragment(FragmentoCategoria.nuevaInstancia(2), getString(R.string.titulo_tab_cuidados));
         viewPager.setAdapter(adapter);
     }
 
@@ -95,7 +94,7 @@ public class FragmentoCategorias extends Fragment {
         }
 
         @Override
-        public Fragment getItem(int position) {
+        public android.support.v4.app.Fragment getItem(int position) {
             return fragmentos.get(position);
         }
 
@@ -104,7 +103,7 @@ public class FragmentoCategorias extends Fragment {
             return fragmentos.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+        public void addFragment(android.support.v4.app.Fragment fragment, String title) {
             fragmentos.add(fragment);
             titulosFragmentos.add(title);
         }

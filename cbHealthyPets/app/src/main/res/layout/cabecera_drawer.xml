@@ -8,7 +8,7 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <!-- Logo Rico Pa' Rico -->
+    <!-- Logo Healthy Pets -->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="@dimen/ancho_logo"

@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 public class FragmentoCategoria extends Fragment {
 
     private static final String INDICE_SECCION
-            = "com.restaurantericoparico.FragmentoCategoriasTab.extra.INDICE_SECCION";
+            = "com.cbhealthypets.FragmentoCategoriasTab.extra.INDICE_SECCION";
 
     private RecyclerView reciclador;
     private GridLayoutManager layoutManager;
@@ -41,13 +41,13 @@ public class FragmentoCategoria extends Fragment {
 
         switch (indiceSeccion) {
             case 0:
-                adaptador = new AdaptadorCategorias(Comida.PLATILLOS);
+                adaptador = new AdaptadorCategorias(Comida.COMIDAS);
                 break;
             case 1:
-                adaptador = new AdaptadorCategorias(Comida.BEBIDAS);
+                adaptador = new AdaptadorCategorias(Comida.SUPLEMENTOS);
                 break;
             case 2:
-                adaptador = new AdaptadorCategorias(Comida.POSTRES);
+                adaptador = new AdaptadorCategorias(Comida.CUIDADOS);
                 break;
         }
 
