@@ -20,15 +20,31 @@
     <string name="titulo_tab_tarjetas">TARJETAS</string>
 
     <string name="texto_no_tarjetas">No tienes ninguna tarjeta asociada</string>
-
     <string name="etiqueta_carrito">Carrito</string>
-
     <string name="texto_cambiar_contrasena">Cambia tu contraseña</string>
     <string name="etiqueta_contrasena">Contraseña</string>
     <string name="etiqueta_info_usuario">Información del usuario</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="facebook_app_id">1717039708570582</string>
+
+
+
+
+
+    <string name="loading">Loading…</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+
+
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
 </resources>

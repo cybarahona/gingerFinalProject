@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="colorAccent">#FF5722</color>
 
     <color name="window_background">#ffffff</color>
     <color name="primaryDarkColor">#323232</color>
@@ -11,5 +11,9 @@
     <color name="background_footer_item_grid_categorias">#90000000</color>
     <color name="color_light">#ffffff</color>
     <color name="background_header_seccion_inicio">#4B4B4B</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
 </resources>
 

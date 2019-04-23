@@ -3,16 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/primaryColor"
+    android:backgroundTint="@color/colorPrimary"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <!-- Logo Healthy Pets -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HealthyPets"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorPrimaryDark" />
+
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="@dimen/ancho_logo"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="127dp"
         android:src="@drawable/logo" />
 
     <TableLayout

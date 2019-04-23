@@ -3,13 +3,13 @@
 
     <string name="categoria_notificaciones">Notificaciones</string>
 
-    <string name="titulo_preferencia">Frecuencia de notificaciones por correo</string>
+    <string name="titulo_preferencia">Suscripcion a Compra</string>
     <string name="key_preferencia">lista_frecuencias</string>
     <string-array name="lista_frecuencia">
-        <item>Un correo diario</item>
-        <item>Un correo a la semana</item>
-        <item>Un correo al mes</item>
-        <item>No quiero recibir correos</item>
+        <item>Compra diario</item>
+        <item>Una compra a la semana</item>
+        <item>Una compra al mes</item>
+        <item>No quiero recibir pedidos</item>
     </string-array>
     <string-array name="lista_valores_frecuencia">
         <item>0</item>

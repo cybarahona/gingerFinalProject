@@ -1,146 +1,139 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_100"
     android:orientation="vertical"
-    >
+    android:weightSum="4">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/pw_authenticaion_textview"
+        <ImageView
+            android:id="@+id/icon"
+            style="@style/ThemeOverlay.FirebaseIcon"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:text="Password Authentication" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/pw_sign_up_button"
-                android:layout_width="146dp"
-                android:layout_height="wrap_content"
-                android:text="sign up" />
-
-            <Button
-                android:id="@+id/pw_sign_in_button"
-                android:layout_width="163dp"
-                android:layout_height="wrap_content"
-                android:text="sign in" />
-
-            <Button
-                android:id="@+id/pw_sign_out_button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="sign out" />
-        </LinearLayout>
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@drawable/firebase_lockup_400" />
 
         <TextView
-            android:id="@+id/google_sign_in_textview"
-            android:layout_width="178dp"
-            android:layout_height="58dp"
-            android:text="Google Sign-In" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/google_sign_in_button"
-                android:layout_width="198dp"
-                android:layout_height="61dp"
-                android:text="sign in" />
-
-            <Button
-                android:id="@+id/google_sign_out_button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="sign out" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/facebook_login_textview"
-            android:layout_width="187dp"
-            android:layout_height="61dp"
-            android:text="Facebook login" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/facebook_login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_gravity="center_horizontal" />
-
-            <Button
-                android:id="@+id/facebook_logout_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="log out" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/twitter_login_textview"
-            android:layout_width="186dp"
-            android:layout_height="33dp"
-            android:text="Twitter login" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.twitter.sdk.android.core.identity.TwitterLoginButton
-                android:id="@+id/twitter_login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal" />
-
-            <Button
-                android:id="@+id/twitter_logout_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="log out" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/github_login_textview"
-            android:layout_width="179dp"
-            android:layout_height="47dp"
-            android:text="Github login" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/github_login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="log in" />
-
-            <Button
-                android:id="@+id/github_logout_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="log out" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/auth_state_textview"
+            android:id="@+id/titleText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_bottom_margin"
+            android:text="@string/emailpassword_title_text"
+            android:theme="@style/ThemeOverlay.MyTitleText" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:text="@string/signed_out" />
+
+        <TextView
+            android:id="@+id/detail"
+            style="@style/ThemeOverlay.MyTextDetail"
+            tools:text="Firebase User ID: 123456789abc" />
+
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/grey_300"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/emailPasswordFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/fieldEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/fieldPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailPasswordButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailPasswordFields"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <Button
+                android:id="@+id/emailSignInButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sign_in"
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+            <Button
+                android:id="@+id/emailCreateAccountButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_account"
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signedInButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            android:weightSum="2.0">
+
+            <Button
+                android:id="@+id/signOutButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/sign_out"
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+            <Button
+                android:id="@+id/verifyEmailButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/verify_email"
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
