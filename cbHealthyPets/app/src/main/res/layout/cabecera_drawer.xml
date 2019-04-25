@@ -12,15 +12,19 @@
     <!-- Logo Healthy Pets -->
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="226dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/caveat_brush"
         android:text="HealthyPets"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/fui_bgAnonymous"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="190dp"
+        android:layout_width="226dp"
         android:layout_height="127dp"
         android:src="@drawable/logo" />
 
